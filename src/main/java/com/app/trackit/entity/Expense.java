@@ -23,9 +23,10 @@ public class Expense {
   Double amount;
   Double budget;
   String description;
-  LocalDateTime expenseDate;
   String type;
   String mode;
+  String month;
+  String year;
   LocalDateTime createdAt;
   LocalDateTime updatedAt;
 }

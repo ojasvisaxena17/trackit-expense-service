@@ -4,6 +4,8 @@ import com.app.trackit.entity.Expense;
 import com.app.trackit.model.NewExpenseRequest;
 import com.app.trackit.model.NewExpenseResponse;
 import com.app.trackit.model.UpdateExpenseRequest;
+
+import java.util.List;
 import java.util.Optional;
 
 public interface ExpenseService {
@@ -12,13 +14,13 @@ public interface ExpenseService {
 
   Optional<Expense> getAllExpenses(int userId);
 
-  Expense getExpenseById(int expenseId);
+  Optional<Expense> getExpenseById(int expenseId);
 
-  public void updateExpense(Integer id, UpdateExpenseRequest expense);
+  public void updateExpense(Integer expenseId,   UpdateExpenseRequest updateExpenseRequest);
 
-  Optional<Expense> getExpenseSummary(Integer userId);
+  Optional<Expense> getMonthlyExpense(Integer userId);
 
-  Optional<Expense> filterExpense(Integer userId, Expense expense);
+  Optional<Expense> filterExpense(Integer userId);
 
   public void deleteExpense(Integer expenseId);
 
