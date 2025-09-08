@@ -1,0 +1,17 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /${spring.application.name}
+
+spring:
+  application:
+    name: trackit-expense-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/trackit
+    username: postgres
+    password: database
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
